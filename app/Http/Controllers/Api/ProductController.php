@@ -11,8 +11,8 @@ class ProductController extends Controller
 {
     public function index(Request $request)
     {
-        $user = Product::all();
-        return new Response(['user' => $user]);
+        $product = Product::with('list', 'cat', 'sub', 'item', 'gallery', 'brand', "tags")->get();
+        return new Response(['product' => $product]);
     }
 
     public function show($slug = '', Request $request)
