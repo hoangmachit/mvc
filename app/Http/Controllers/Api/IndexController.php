@@ -6,18 +6,25 @@ use Illuminate\Routing\Controller;
 use Illuminate\Http\Request;
 use Illuminate\Http\Response;
 use App\Repositories\NewRepository;
-
+use App\Repositories\StaticRepository;
 class IndexController extends Controller
 {
     private $newRepository;
+    private $staticRepository;
     public function __construct(
-        NewRepository $newRepository
+        NewRepository $newRepository,
+        StaticRepository $staticRepository
     ){
         $this->newRepository = $newRepository;
+        $this->staticRepository = $staticRepository;
     }
     public function index(Request $request)
     {
-        $newHot = $this->newRepository->getNewsHot(['type'=> 'vi-sao']);
-        return new Response(['newHot' => $newHot]);
+        $why = $this->newRepository->getNewsHot(['type'=> 'vi-sao']);
+        $about = $this->staticRepository->getStatics(['type'=>'gioi-thieu']);
+        return new Response([
+            'why' => $why,
+            'about' => $about
+        ]);
     }
 }
