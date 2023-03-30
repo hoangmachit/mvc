@@ -10,6 +10,7 @@ async function getData() {
   return data.json();
 }
 import Header from "@/components/Header";
+import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 export default async function RootLayout({ children }) {
   const data = await getData();
@@ -17,6 +18,7 @@ export default async function RootLayout({ children }) {
     <html lang="en">
       <body>
         <Header data={data} />
+        <Navigation />
         {children}
         <Footer data={data} />
       </body>

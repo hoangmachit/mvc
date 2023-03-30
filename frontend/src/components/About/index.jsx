@@ -1,3 +1,5 @@
+import Link from "next/link";
+import Image from "next/image";
 export default function About({ about }) {
   return (
     <>
@@ -10,18 +12,18 @@ export default function About({ about }) {
               className="desc_about"
               dangerouslySetInnerHTML={{ __html: about.contenten }}
             ></div>
-            <a href="gioi-thieu" className="more_about">
+            <Link className="more_about" href={"/pages/gioi-thieu"}>
               <span>Xem thêm</span>
-            </a>
+            </Link>
           </div>
           <div className="right">
-            <img
-              className="lazy w-100 loaded"
-              data-src="http://localhost/source/thumbs/470x350x1/upload/news/news-2-1467-6233.jpg.webp"
-              alt="Về chúng tôi"
-              src="http://localhost/source/thumbs/470x350x1/upload/news/news-2-1467-6233.jpg.webp"
-              data-was-processed="true"
-            />{" "}
+            <Image
+              src={"/image/about.jpg"}
+              alt={about.namevi}
+              width={600}
+              height={300}
+              loading={"lazy"}
+            />
           </div>
         </div>
       </div>

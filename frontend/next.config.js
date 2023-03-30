@@ -3,6 +3,9 @@ const nextConfig = {
   experimental: {
     appDir: true,
   },
+  images: {
+    domains: ['shopbetet.vn'],
+  }
 }
 
 module.exports = nextConfig

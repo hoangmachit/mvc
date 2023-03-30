@@ -1,5 +1,4 @@
 export default function Why({why}) {
-  console.log("why",why);
   return (
     <>
       <div className="load-vs">

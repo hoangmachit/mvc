@@ -1,3 +1,4 @@
+import Link from "next/link";
 export default function Footer({ data }) {
   const { config } = data;
   return (
@@ -16,29 +17,20 @@ export default function Footer({ data }) {
               <div className="footer-col">
                 <h2 className="footer-title">Chính sách hỗ trợ</h2>
                 <ul className="footer-ul">
-                  <li>
-                    <a href="chinh-sach-tra-hang" title="Chính sách trả hàng">
-                      Chính sách trả hàng
-                    </a>
-                  </li>
-                  <li>
-                    <a href="chinh-sach-bao-hanh" title="Chính sách bảo hành">
-                      Chính sách bảo hành
-                    </a>
-                  </li>
-                  <li>
-                    <a href="chinh-sach-mua-hang" title="Chính sách mua hàng">
-                      Chính sách mua hàng
-                    </a>
-                  </li>
-                  <li>
-                    <a
-                      href="chinh-sach-nguoi-dung"
-                      title="Chính sách người dùng"
-                    >
-                      Chính sách người dùng
-                    </a>
-                  </li>
+                  {config.policy &&
+                    config.policy.length > 0 &&
+                    config.policy.map((item, index) => {
+                      return (
+                        <li key={index}>
+                          <Link
+                            href={`/news/${item.slugvi}`}
+                            title={item.namevi}
+                          >
+                            {item.namevi}
+                          </Link>
+                        </li>
+                      );
+                    })}
                 </ul>
               </div>
               <div className="footer-col">

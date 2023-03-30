@@ -732,6 +732,7 @@ img:not([src]) {
   width: 230px;
   background: #ffffff;
   border-radius: 5px;
+  margin-top: -15px;
 }
 
 .search button {
@@ -1528,11 +1529,15 @@ img:not([src]) {
   text-align: center;
   border: 1px solid #e6e6e6;
   background: #fff;
+  padding: 1rem;
+  border-radius: 5px;
 }
 
 .product_noidung {
   position: relative;
+  padding: 10px;
 }
+
 
 .product-items .img {
   position: relative;
@@ -1887,48 +1892,6 @@ img:not([src]) {
   -ms-grid-columns: (calc(50% - (20px / 2)))[2];
   grid-template-columns: repeat(2, calc(50% - (20px / 2)));
   grid-gap: 20px;
-}
-
-.news-items {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-}
-
-.news-items .img {
-  width: 100%;
-  max-width: 180px;
-}
-
-.news-items .news-info {
-  width: calc(100% - 200px);
-}
-
-.news-items .news-name {
-  font-size: 16px;
-  font-family: "RobotoBold";
-  margin: 0px;
-}
-
-.news-items .news-name a {
-  color: #333;
-}
-
-.news-items .news-name a:hover {
-  color: #f00;
-}
-
-.news-items .news-time {
-  margin: 0px;
-  font-size: 13px;
-  color: #333;
-  margin: 5px 0px;
 }
 
 .othernews b {
@@ -2941,6 +2904,62 @@ coccocgrammar {
 
 .js-facebook-messenger-box.open svg#close-icon {
   opacity: 1;
+}
+
+/* news */
+.grid-news {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.news-items__info {
+  padding: 10px;
+}
+
+.news-items__info h3 {
+  font-size: 15px;
+  text-align: center;
+}
+
+.news-items__info h3 a {
+  color: inherit;
+}
+
+.news-items__info h3 a:hover {
+  color: #ff0000;
+}
+
+.news-items__info--content {
+  text-align: center;
+}
+
+.news-items__info--content p {
+  margin-bottom: 0px;
+  line-height: 1.5;
+}
+
+.news-items__info--view {
+  text-align: right;
+  margin-top: 10px;
+}
+
+.news-items__info--view a {
+  border: 1px solid #ebebeb;
+  display: inline-block;
+  line-height: 1;
+  padding: 5px 10px;
+  border-radius: 3px;
+  color: initial;
+}
+
+.slideshow-item a {
+  display: block;
+}
+
+.slideshow-item img {
+  width: 100%;
+  height: auto;
 }
 
 /*# sourceMappingURL=style.css.map */

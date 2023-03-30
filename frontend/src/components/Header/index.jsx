@@ -1,3 +1,4 @@
+import Image from "next/image";
 export default function Header({ data }) {
   const { config } = data;
   return (
@@ -18,67 +19,67 @@ export default function Header({ data }) {
             </p>
             <ul className="social social-header list-unstyled p-0 m-0">
               <li className="d-inline-block align-top mr-1">
-                <a href="https://www.google.com/" target="_blank">
-                  <img
-                    className="lazy loaded"
-                    data-src="http://localhost/source/thumbs/30x30x2/upload/photo/mxh1-1-1957-80510.png.webp"
-                    alt="Thiết kế website Hoàng Anh Ads"
-                    src="http://localhost/source/thumbs/30x30x2/upload/photo/mxh1-1-1957-80510.png.webp"
-                    data-was-processed="true"
-                  />{" "}
+                <a href="https://www.facebook.com/" target="_blank">
+                  <Image
+                    height={35}
+                    width={35}
+                    src="/image/facebook.png"
+                    loading="lazy"
+                    alt="Facebook"
+                  />
+                </a>
+              </li>
+              <li className="d-inline-block align-top mr-1">
+                <a href="https://www.twitter.com/" target="_blank">
+                  <Image
+                    height={35}
+                    width={35}
+                    src="/image/twitter.png"
+                    loading="lazy"
+                    alt="Twitter"
+                  />
                 </a>
               </li>
               <li className="d-inline-block align-top mr-1">
                 <a href="https://www.google.com/" target="_blank">
-                  <img
-                    className="lazy loaded"
-                    data-src="http://localhost/source/thumbs/30x30x2/upload/photo/mxh1-2-1178-74341.png.webp"
-                    alt="Thiết kế website Hoàng Anh Ads"
-                    src="http://localhost/source/thumbs/30x30x2/upload/photo/mxh1-2-1178-74341.png.webp"
-                    data-was-processed="true"
-                  />{" "}
+                  <Image
+                    height={35}
+                    width={35}
+                    src="/image/google.png"
+                    loading="lazy"
+                    alt="Google"
+                  />
                 </a>
               </li>
               <li className="d-inline-block align-top mr-1">
-                <a href="https://www.google.com/" target="_blank">
-                  <img
-                    className="lazy loaded"
-                    data-src="http://localhost/source/thumbs/30x30x2/upload/photo/mxh1-3-4655-85900.png.webp"
-                    alt="Thiết kế website Hoàng Anh Ads"
-                    src="http://localhost/source/thumbs/30x30x2/upload/photo/mxh1-3-4655-85900.png.webp"
-                    data-was-processed="true"
-                  />{" "}
-                </a>
-              </li>
-              <li className="d-inline-block align-top mr-1">
-                <a href="https://www.google.com/" target="_blank">
-                  <img
-                    className="lazy loaded"
-                    data-src="http://localhost/source/thumbs/30x30x2/upload/photo/mxh1-4-6766-68891.png.webp"
-                    alt="Thiết kế website Hoàng Anh Ads"
-                    src="http://localhost/source/thumbs/30x30x2/upload/photo/mxh1-4-6766-68891.png.webp"
-                    data-was-processed="true"
-                  />{" "}
+                <a href="https://www.printes.com/" target="_blank">
+                  <Image
+                    height={35}
+                    width={35}
+                    src="/image/printess.png"
+                    loading="lazy"
+                    alt="printess"
+                  />
                 </a>
               </li>
             </ul>
             <div className="lang-header">
               <a href="ngon-ngu/vi/">
-                <img
-                  className="lazy loaded"
-                  data-src="http://localhost/source/assets/images/vi.jpg.webp"
-                  alt="Tiếng Việt"
-                  src="http://localhost/source/assets/images/vi.jpg.webp"
-                  data-was-processed="true"
+                <Image
+                  height={35}
+                  width={25}
+                  src="/image/vi.jpg"
+                  loading="lazy"
+                  alt="Google"
                 />
               </a>
               <a href="ngon-ngu/en/">
-                <img
-                  className="lazy loaded"
-                  data-src="http://localhost/source/assets/images/en.jpg.webp"
-                  alt="Tiếng Anh"
-                  src="http://localhost/source/assets/images/en.jpg.webp"
-                  data-was-processed="true"
+                <Image
+                  height={35}
+                  width={25}
+                  src="/image/en.jpg"
+                  loading="lazy"
+                  alt="Google"
                 />
               </a>
             </div>
@@ -97,23 +98,23 @@ export default function Header({ data }) {
         <div className="header-bottom">
           <div className="center-layout wrap-content d-flex align-items-center justify-content-between">
             <div className="logo-header">
-              <a href="http://localhost/source/" title="Logo">
+              <a href="/" title="Logo">
                 <img
                   className="lazy loaded"
-                  data-src="http://localhost/source/thumbs/120x100x2/upload/photo/logo-8180-7565.jpg.webp"
+                  data-src="/image/logo.jpg"
                   alt="Thiết kế website Hoàng Anh Ads"
-                  src="http://localhost/source/thumbs/120x100x2/upload/photo/logo-8180-7565.jpg.webp"
+                  src="/image/logo.jpg"
                   data-was-processed="true"
                 />
               </a>
             </div>
             <div className="banner-header">
-              <a href="http://localhost/source/" title="Banner">
+              <a href="" title="Banner">
                 <img
                   className="lazy loaded"
-                  data-src="http://localhost/source/thumbs/730x120x2/upload/photo/banner-5151-3538.jpg.webp"
+                  data-src="/image/banner.jpg"
                   alt="Thiết kế website Hoàng Anh Ads"
-                  src="http://localhost/source/thumbs/730x120x2/upload/photo/banner-5151-3538.jpg.webp"
+                  src="/image/banner.jpg"
                   data-was-processed="true"
                 />{" "}
               </a>
